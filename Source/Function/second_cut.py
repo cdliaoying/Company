@@ -17,7 +17,7 @@ import jieba
 jieba.load_userdict('/Applications/jieba-0.39/User_Define.txt')  # 引用本地词库
 
 
-def sen1_cut(addr):
+def add1_cut(addr):
     if addr[0] == 'True':
         _add1 = jieba.lcut(addr[1])
     else:
@@ -25,7 +25,7 @@ def sen1_cut(addr):
     return _add1
 
 
-def sen2_cut(addr):
+def add2_cut(addr):
     if addr[0] == 'True':
         _add2 = jieba.lcut(addr[2])
     else:

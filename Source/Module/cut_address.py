@@ -17,9 +17,9 @@ from Source.Function import first_cut
 from Source.Function import second_cut
 
 addr = input('请输入测试地址...\n')  # 天府新区天府大道11号1栋1单元101号
-addr_cut = first_cut.address_first_cut(addr)
-add1 = second_cut.sen1_cut(addr_cut)
-add2 = second_cut.sen2_cut(addr_cut)
-print('地址识别结果：', addr_cut)
-print('宏观拆分结果：', add1)
-print('微观拆分结果：', add2)
+addr_cut = first_cut.address_first_cut(addr)  # 引用Function对address进行识别和两部分拆分
+add1 = second_cut.add1_cut(addr_cut)  # 引用函数对宏观部分进行拆分
+add2 = second_cut.add2_cut(addr_cut)  # 引用函数对微观部分进行拆分
+print('地址识别：', addr_cut)
+print('宏观拆分：', add1)
+print('微观拆分：', add2)
